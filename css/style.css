@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2 ?family=Comfortaa:wght@300;400;500;600&family=Mulish:wght@400;500;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 107.5%;
+}
+
+.btn-yellow {
+  padding: 16px 24px;
+  background: #FECE24;
+  color: #272C31;
+}
+
+a {
+  color: var(--color-a);
+  text-decoration: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--color-ah);
+  text-decoration: none;
+}
+
+.dn {
+  display: none;
+}
+
+h1, .h1, h2, .h2 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 107.5%;
+  color: var(--color-font);
+}
+
+@media (max-width: 1600px) {
+  h1, .h1, h2, .h2 {
+    font-size: calc(24px + 26 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  h1, .h1, h2, .h2 {
+    font-size: 50px;
+  }
+}
+
+h3,
+.h3 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--color-font);
+}
+
+@media (max-width: 1600px) {
+  h3,
+  .h3 {
+    font-size: calc(20px + 14 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  h3,
+  .h3 {
+    font-size: 34px;
+  }
+}
+
+:root {
+  --color-font: #272C31;
+  --color-a: #5E6F9C;
+  --color-ah: #CAD0D7;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-font);
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    font-size: 20px;
+  }
+}

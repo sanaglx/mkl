@@ -1,0 +1,16 @@
+@import "ui";
+:root {
+    --color-font: #272C31;
+    --color-a: #5E6F9C;
+    --color-ah: #CAD0D7;;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    @include font(20, 16);
+    line-height: 130%;
+    color: var(--color-font);
+}

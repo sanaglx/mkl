@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2 ?family=Comfortaa:wght@300;400;500;600&family=Mulish:wght@400;500;600;700;800&display=swap') ;
+
+
+$maxWidth1: 1448;
+$maxWidth: 1920;
+*{
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    @media (max-width: $maxWidth+px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media (min-width: $maxWidth+px) {
+        font-size: $pcSize + px;
+    }
+}
+@mixin border($lg, $sm){
+    border-radius: #{$lg + px};
+    @media(max-width:992px){border-radius: #{$lg/1.5 + px};}
+    @media(max-width:768px){border-radius: #{$sm + px};}
+}
+
+@mixin rimg($btm) {
+    @media(max-width:$maxWidth+px){
+        bottom:calc( 956px - (100vw / 2) - #{$btm}px );
+     }
+     @media (min-width: $maxWidth+px) {
+        bottom:-#{$btm}px;
+    }
+}
+
+.btn{
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 107.5%;
+}
+.btn-yellow{
+    padding: 16px 24px;
+    background: #FECE24;
+    color: #272C31;
+}
+
+a {
+    color: var(--color-a);
+    text-decoration: none;
+    transition: 0.3s all;
+    display: inline-block;
+    &:hover {
+        color: var(--color-ah);
+        text-decoration: none;
+    }
+}
+.dn {display: none;}
+h1,.h1,h2,.h2 {
+    font-style: normal;
+    font-weight: 700;
+    @include font(50, 24);
+    line-height: 107.5%;
+    color: var(--color-font);
+}
+
+h3,
+.h3 {
+    font-style: normal;
+    font-weight: 700;
+    @include font(34, 20);
+    line-height: 130%;
+    color: var(--color-font);
+}
