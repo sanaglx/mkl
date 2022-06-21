@@ -1,0 +1,122 @@
+.step-footer{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .shag{
+        .step{
+            display: flex;
+        }
+    }
+}
+
+.tab {
+    display: none;
+}
+
+.step {
+    position: absolute;
+    height: 15px;
+  //  width: 15px;
+  width: 70px;
+    margin: 0 2px;
+   // background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+    
+}
+
+.step.active {
+    opacity: 1;
+}
+
+
+.modal-2{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  max-width: 70%;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #999;
+  overflow: hidden;
+  .inp-col{
+      padding: 32px;
+   }
+   .formx .conset {
+      margin-top: -8px;
+  }
+  .title-form{
+    font-weight: 700;
+    @include font(24, 18);
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+  .text-form{
+    margin-bottom: 30px;
+  }
+
+  .modal-heder {
+      background: #000;
+      color:#fff;
+      display: flex;
+      align-items: center;
+      height: 133px;
+      padding: 0 32px;
+      @include font(34,20);
+      justify-content: space-between;
+  }
+  
+}
+
+/*****radio - knopka*******/
+.radio{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.inp-radio {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.inp-radio input[type=radio] {
+	display: none;
+}
+.inp-radio label {
+	display: inline-block;
+	cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+	padding: 15px 115px;
+	border-radius: 6px;
+	user-select: none;
+    border: 1px solid #ddd;
+}
+ 
+/* Checked */
+.inp-radio input[type=radio]:checked + label {
+	background: rgba(254,206,36,0.3);
+    border: 1px solid #FECE24;
+}
+ 
+/* Hover */
+.inp-radio label:hover {
+	color: #666;
+    border: 1px solid #FECE24;
+}
+ 
+/* Disabled */
+.inp-radio input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}

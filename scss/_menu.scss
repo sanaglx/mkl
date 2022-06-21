@@ -1,0 +1,116 @@
+.top-line {
+    display: flex;
+    margin-top: 39px;
+}
+.logo {
+    margin-left: 48px;
+    flex:1;
+}
+.phone {
+    font-weight: 700;
+    @include font(20,16);
+    margin-right: 48px;
+}
+
+.line1,.line2{
+    max-width:80px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.line1{position: absolute;top: 74px;left: 0;z-index: 10000;}
+.line2{position: absolute;bottom: 80px;left: 0;z-index: 10000;}
+.left{
+  background: var(--bkgmenu); 
+  height: 100%; 
+  flex:0 80px;
+  position: relative;
+}
+.burger {
+    flex:1 20%;
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            width: 32px;height: 2px;
+            background: var(--color-font);
+            left: 0;
+            transition: 0.3s all;
+        }
+        &::before{top: 0;}
+        &::after{top: 8px;}
+    span{
+        position: absolute;
+        background:var(--color-font);
+        width:16px;
+        height: 2px;
+        left: 0;
+        top:16px;
+    }
+    &.active{
+        span{display: none;}
+        &::before{top: 12px;transform: rotate(45deg);}
+        &::after{top: 12px;transform: rotate(-45deg);}
+    }
+}
+.yellow-col {
+    padding: 24px 0px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    transition: 0.3s all;
+    width: 43px;
+    background: var(--bkgmenu);
+    z-index: 1000;
+    &.active{
+        width: 50%;
+        nav{left:50%}
+        background: var(--bkgmenu);
+    }
+
+}
+
+nav{
+    flex:1 80%;
+    position: absolute;
+    left: -300%;
+    top:45%;
+    transform: translate(-60%,-50%);
+    transition: 0.3s all;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+        
+        a{
+            font-weight: 700;
+            @include font(34, 18);
+            line-height: 170%;
+            min-width: 270px;
+            color: var(--color-font); 
+        }
+    }
+
+}
+
+@media(max-width:768px){
+    .yellow-col.active {width: 70%;}
+    nav{top:30%;}
+    .yellow-col.active  nav{top:30%; left:24px;transform: translate(0%,-50%);}
+
+}
+@media(max-width:567px){
+    .wrapper {grid-template-columns:47px 1fr;}
+    .burger::before, .burger::after{width: 24px;}
+    .phone img{width: 28px;}
+    .yellow-col{padding: 24px 0px 24px 8px;}
+    .left{width: 48px;flex: initial;}
+    .yellow-col.active {width: 90%;}
+    .menu li a{ min-width: 223px; }
+}

@@ -1,0 +1,57 @@
+@media(max-width:1448px){
+    .logo{margin-left: 20px;}
+    .phone{margin-right: 20px;}
+}
+
+@media(max-width:1199px){
+    .galery-block {grid-template-columns: repeat(3, 1fr);}
+    .politic{flex-wrap: wrap;}
+}
+@media(max-width:991px){
+    .galery-block {grid-template-columns: repeat(2, 1fr);}
+    .footer-block{display: grid;grid-template-columns: 1fr 1fr;}
+    .formx .inp-row{grid-template-columns: repeat(2,1fr);}
+    .compani{margin-bottom: 80px;}
+    .mb100{margin-bottom: 60px;}
+    .soc{max-width: initial;}
+    .adr{text-align: right;}
+    .karta{
+        height: 450px;
+    }
+
+}
+@media(max-width:850px){
+    .contact-adr{
+        flex-direction: column;
+        align-items: baseline;
+        gap:20px;
+    }
+}
+@media(max-width:768px){
+    .bolck-isp{grid-template-columns: repeat(3, 1fr);} 
+    .block-ms {grid-template-columns: 1fr 1fr;}
+}
+@media(max-width:650px){
+    .formx .inp-row{grid-template-columns:1fr;}
+}
+@media(max-width:567px){
+    .bolck-isp{    grid-template-columns: repeat(2, 1fr); }
+    .galery__text1{@include font(24,10);}
+    .footer-block{display: grid;grid-template-columns: 1fr;gap:8px; padding: 20px 15px;}
+    .compani{margin-bottom: 40px;}
+    .mb100{margin-bottom: 40px;}
+    .adr{text-align: left;}
+    .karta{margin: 24px 0 40px;height: 300px;}
+    .strlka {margin-top: 30px; img{width: 22px;}}
+}
+
+@media(max-width:500px){
+    .top-line{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+    }
+    .top-line .logo{margin: 0 0 5px 0;}
+    .phone{margin-right: 0;}
+}
+@media(max-width:383px){}

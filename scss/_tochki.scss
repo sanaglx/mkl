@@ -1,0 +1,126 @@
+/****/
+.tchk1 {
+    position: absolute;
+    display: flex;align-items: center;justify-content: center;
+    width: 51px;height: 51px;border:1px solid var(--bkgmenu);
+    border-radius: 50px;
+    &:hover{
+      //  animation: circle-before 2.2s infinite ease-in-out; 
+    }
+   
+    .menu {
+        &__button {
+            display: flex;align-items: center;justify-content: center;
+            width: 34px;height: 34px;border-radius: 50%;background: var(--bkgmenu);
+            transition: 0.3s all; padding: 3px 0 0 1px;
+            &:hover{
+                width: 48px;height: 48px;
+            }
+            &::before{
+                content:url(../img/ico/lock.svg);
+            }
+            &:hover{
+                background: var(--color-font);
+                animation: circle-before1 2.2s infinite ease-in-out;
+                &::before{
+                    content:url(../img/ico/lock-w.svg);
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    border-radius: 50%; 
+                    width: 68px;height: 68px;
+                    margin: -5px 0px 0px -2px;
+                    border:1px dashed var(--bkgmenu);
+                    animation: circle-before1 2.2s infinite ease-in-out;
+                }
+            }
+        }
+    }
+    .menu {
+        &__button1 {
+            display: flex;align-items: center;justify-content: center;
+            width: 34px;height: 34px;border-radius: 50%;background: var(--bkgmenu);
+            transition: 0.3s all;    padding-top: 3px;
+            &:hover{
+                width: 45px;height: 45px; 
+            }
+
+            &::before{
+                content:url(../img/ico/lock1.svg);
+            }
+            &:hover{
+                background: var(--color-font);
+                animation: circle-before1 2.2s infinite ease-in-out;
+                &::before{
+                    content:url(../img/ico/lock1-w.svg);
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    border-radius: 50%; 
+                    width: 68px;height: 68px;
+                    margin: -3px 0px 0px 0;
+                    border:1px dashed var(--bkgmenu);
+                    animation: circle-before1 2.2s infinite ease-in-out;
+                }
+            }
+        }
+    }
+    .menu {
+        &__button2 {
+            display: flex;align-items: center;
+            justify-content: center;
+            width: 34px;height: 34px;
+            border-radius: 50%;
+            background: var(--bkgmenu);
+            transition: 0.3s all; padding: 3px 0 0 0px;
+            &:hover{
+                width: 45px;height: 45px;
+            }
+            &::before{
+                content:url(../img/ico/cluch.svg);
+            }
+            &:hover{
+                background: var(--color-font);
+                animation: circle-before 2.2s infinite ease-in-out;
+                &::before{
+                    content:url(../img/ico/cluch-w.svg);
+                  
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    border-radius: 50%; 
+                    width: 68px;height: 68px;
+                    margin: -3px 0px 0px 0;
+                    border:1px dashed var(--bkgmenu);
+                    animation: circle-before1 2.2s infinite ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.position-1{
+    right: 1056px;bottom: 20%;
+    
+}
+.position-2{right: 929px;bottom: 23%;} 
+.position-3{right: 818px;bottom: 26%;} 
+.position-4{right: 700px;bottom: 21%;} 
+.position-5{right: 580px;bottom: 23%;} 
+.position-6{right: 456px;bottom: 23%;} 
+.position-7{right: 250px;bottom: 23%;} 
+
+@keyframes circle-before {
+    100% {transform: scale(1 );}
+    50%{transform: scale(1.1);}
+    0% {transform: scale(1);}
+}
+@keyframes circle-before1 {
+    100% {transform: scale( 0.8 );}
+    50%{transform: scale(1);}
+    0% {transform: scale(0.8);}
+}
+/***/
