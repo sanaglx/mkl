@@ -1,0 +1,403 @@
+.yellow-block {
+    position: absolute;
+    background: #fece24;
+    width: 37.4%;
+    height: 688px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.f100 {
+    margin-bottom: 115px;
+    .top-block {
+        gap: 14%;
+        grid-template-columns: 493px 1fr;
+        margin-bottom: 193px;
+    }
+    .gr__text {
+        margin: 63px 0 0px;
+    }
+}
+.f100-top {
+    margin: 0px 0 0 0;
+    .strlka {
+        margin: 0px 0 24px;
+    }
+}
+.gr-block-im {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 50px;
+    .galery__img {
+        height: 357px;
+    }
+}
+.gb-item {
+    position: relative;
+    background: linear-gradient(183.38deg, #272c31 2.79%, rgba(39, 44, 49, 0) 97.31%),
+        url(3d-rendering-wood-classic-living-room-with-marble-tile-bookshelf.jpg);
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gb-i-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 32px 42px 42px 42px;
+    display: flex;
+    flex-direction: column;
+    height: 357px;
+    .btn {
+        font-size: 16px;
+        padding: 10px 25px;
+        height: 38px;
+        align-self: end;
+    }
+
+    &-1 {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    &-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    &__title {
+        @include font(24, 18);
+        max-width: 150px;
+    }
+}
+.gb-i-block2 {
+    &__title {
+        @include font(16, 14);
+        margin-bottom: 17px;
+    }
+
+    &__text {
+        @include font(14, 12);
+        line-height: 1.2;
+    }
+}
+
+.gb-ico-b {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 14px;
+    li {
+        a {
+        }
+    }
+}
+
+.top-block {
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.f101-minus {
+    margin-bottom: 132px;
+}
+.f101-minus .top-block {
+    margin:64px 0 0 0;
+}
+
+/*****modal-3******/
+.modal{display: none;}
+.modal3,
+.modal4{
+    //height: 98vh;
+    overflow: auto !important;
+    
+}
+.modal3{
+    //display: none;
+}
+.modal4{
+   // display: none;
+}
+.modal-contect {
+}
+.mod-cont-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 30px;
+    gap: 30px;
+    align-items: flex-start;
+    line-height: 120%;
+    &__left {
+        @include font(16, 12);
+        flex: 1;
+    }
+    &__right {
+        ul{
+        padding: 0;
+        margin: 0;
+
+        }
+        flex: 1;
+        @include font(16, 12);
+    }
+}
+.mod-cont-center {
+    align-items: center;
+    margin: auto;
+    max-width: 544px;
+    padding: 0 55px;
+    overflow: hidden;
+}
+.mod-cont {
+    &__1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .n-lin {
+            margin-left: 0;
+        }
+    }
+
+    &__img {
+        width: 118px;
+        height: 118px;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.nabor {
+    border-top: 1px dashed rgba(0, 0, 0, 0.25);
+    margin-bottom: 48px;
+    position: relative;
+
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 130%;
+        text-align: center;
+    }
+}
+.nabor-img-center {
+    width: 41px;
+    height: 41px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-51%);
+}
+.nabor-ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 -54px;
+    li {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 60px;
+        justify-self: center;
+    }
+}
+.n-lin {
+    border-left: 1px dashed rgba(0, 0, 0, 0.25);
+    height: 37px;
+    width: 1px;
+    margin-left: 26px;
+}
+.nabor-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #fece24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.modal-footer {
+    margin-top: 20px;
+    border-top:1px solid rgba(50, 50, 50, 0.2);
+    padding: 30px 30px 10px 30px;
+}
+.block-2g {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.block-2g .block-2g__item .inp-col {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    .inp {
+        flex: 1;
+    }
+}
+.stv {
+    display: flex;
+    margin-bottom: 10px;
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        margin-right: 16px;
+    }
+}
+.gb-ico-b {
+}
+.block-2g-small {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #cad0d7;
+}
+
+/*****\modal-3******/
+
+/*****modal-4*****/
+.mod-cont-slider{
+    width: 100%;
+}
+.mod-owl__item{
+    position: relative;
+    width: 100%;
+    padding-top: 65.25%; /* отношение 16:9 */
+    img{
+        position: absolute;
+        top: 0;
+        
+    }
+}
+.mod-owl{
+    .owl-prev,
+    .owl-next{
+        position: absolute;
+        top:0;
+        background: rgba(50, 50, 50, 0.2) !important;
+        height: 100%;width: 50px;
+        transition: 0.3s all;
+        &:hover{
+            background: rgba(0, 0, 0, 0.25) !important; 
+        }
+    }
+
+    .owl-prev{
+        padding: 0px;
+        left: 00px
+    }
+    .owl-next{
+        padding: 0px;
+        right: 0px;
+    }
+
+} 
+/*****\modal-4*****/
+
+@media (max-width: 1380px) {
+    .yellow-block {
+        max-height: calc(688px - 100vw / 100 * 4.5);
+        height: 100%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .f100 .top-block {
+        gap: 7%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .top-block__img {
+        max-height: 370px;
+    }
+}
+
+@media (max-width: 992px) {
+    .yellow-block {
+        display: none;
+    }
+    .top-block__img {
+        display: none;
+    }
+    .f100 .top-block {
+        display: block;
+        margin-bottom: 80px;
+    }
+    .gr-block-im {
+        grid-template-columns: 1fr;
+    }
+    .f101-minus {
+        margin: initial;
+    }
+}
+
+@media (max-width: 500px) {
+    .gb-i-block {
+        padding: 16px;
+    }
+    .gb-i-block-1 {
+        gap: 16px;
+    }
+    .f100 .gr__text {
+        margin: 30px 0 0px;
+    }
+    .f100 .top-block {
+        margin-bottom: 30px;
+    }
+    .f100 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 383px) {
+    .gb-i-block-1 {
+        display: block;
+    }
+    .gb-i-block__title {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+    .gb-i-block2__title {
+        margin-bottom: 10px;
+    }
+    .gb-i-block-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .gb-i-block-2 a {
+        order: 2;
+    }
+    .gr-block-im .galery__img {
+        height: 301px;
+    }
+    .gb-i-block {
+        height: 300px;
+    }
+}
+

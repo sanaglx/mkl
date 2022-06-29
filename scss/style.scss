@@ -17,6 +17,22 @@ body {
     color: var(--color-font);
 }
 
+html,body {
+    &.modal-active {
+      overflow: hidden;
+      .teni{
+        position:fixed;
+        display:table;
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+        z-index:1001;
+        background: rgba(0,0,0,0.7);
+      }
+    }
+  }
+
 .block-gl {
     display: flex;
     flex-direction: column;
@@ -31,6 +47,7 @@ body {
     .prev {
         padding: 0;
         margin: 0;
+   
         li {
             display: flex;
             align-items: center;
@@ -49,6 +66,7 @@ body {
 
 .bkg-gl {
     background: url(../img/gl1.jpg) right no-repeat;
+    position: relative;
     /*background-size:cover;*/
 }
 /**f95**/
@@ -98,6 +116,7 @@ body {
     &__item {
         display: block;
         position: relative;
+
     }
     &__text1 {
         font-weight: 700;
@@ -112,6 +131,16 @@ body {
        background: -100% rgba(0,0,0,0);
        height: 100%;
        opacity: 0.7;
+       .btn{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: 7%;
+            opacity: 0;
+            padding: 10px 20px;
+            @include font(16,12);
+            transition: 0.7s all ;
+        }
     }
     &__text2 {
         position: absolute;
@@ -127,12 +156,16 @@ body {
             object-fit: cover;
         }
     }
+   
 
 }
 .galery__item:hover{
      .galery__text1{
         background: rgba(0,0,0,0.5); 
         color: #FECE24;
+        opacity: 1;
+    }
+    .btn{
         opacity: 1;
     }
 }
@@ -204,7 +237,7 @@ body {
 } 
 
 /**********modal***************/ 
-  .modal{display: none;}
+  .modal{max-height: 94vh;}
   .modal-1{
     position: fixed;
     top: 50%;
@@ -215,6 +248,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px #ccc;
     overflow: hidden;
+    z-index: 1005;
     .inp-col{
         padding: 32px;
      }
@@ -230,6 +264,9 @@ body {
         padding: 0 32px;
         @include font(34,20);
         justify-content: space-between;
+        &__title{
+            margin: 0 30px 0 0;
+        }
     }
     
   }
@@ -263,7 +300,9 @@ body {
 /**endf97**/
 
 /**contact**/ 
-.strlka{margin-top: 80px;}
+.strlka{
+     margin: 62px 0 24px;
+}
 .contact-adr{
     display: flex;
     @include font(34, 20);
@@ -298,6 +337,9 @@ body {
 @import "tochki";
 @import "menu";
 @import "f98";
+@import "f99";
+@import "f100";
 @import "form_tab";
+//@import "modal";
 
 @import "media";
