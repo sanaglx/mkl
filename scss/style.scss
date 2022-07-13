@@ -7,7 +7,9 @@
     --bkgmenu: #fece24;
 }
 
-body {
+body, 
+body .f100,
+body .f101 {
     background-color: #ffffff;
     font-family: "Mulish", sans-serif;
     font-style: normal;
@@ -15,6 +17,9 @@ body {
     @include font(20, 16);
     line-height: 130%;
     color: var(--color-font);
+    max-width: 2580px;
+   // overflow:hidden;
+
 }
 
 html,body {
@@ -33,20 +38,29 @@ html,body {
     }
   }
 
+.mb100{margin-bottom: 100px;}
 .block-gl {
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 5vh;
+
+    height: calc(100vh - 23vh);
     h1 {
         max-width: 475px;
         margin-bottom: 48px;
     }
+    .obtn{
+        flex:1;
+        height: 100%;
+    }
     .btn {
-        margin-bottom: 200px;
+        margin-bottom: 0;
     }
     .prev {
         padding: 0;
         margin: 0;
+        max-width: 361px;
+        
    
         li {
             display: flex;
@@ -77,14 +91,17 @@ html,body {
 .bkg-gl {
     background: url(../img/gl1.jpg) right no-repeat;
     position: relative;
+   
     /*background-size:cover;*/
 }
 /**f95**/
 .f95 h1 {
-    margin: 80px 0 72px;
+    //margin: 60px 0 72px;
+    padding-top:5vh;
+    padding-bottom:5.8vh ;
 }
 .f95 .ph1 {
-    margin: 80px 0 72px;
+    margin: 00px 0 5vh;
 }
 
 .block-ms {
@@ -116,6 +133,7 @@ html,body {
     margin-top: 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    height: 100%;
     h1 {
         @include font(34, 16);
         color:#fff;
@@ -126,7 +144,10 @@ html,body {
     &__item {
         display: block;
         position: relative;
+        max-height: 33.3vh;
+       // height: 100%;
 
+       // max-height: 317px;
     }
     &__text1 {
         font-weight: 700;
@@ -196,9 +217,11 @@ html,body {
 /**endf96**/
 /**f97**/
 .f97 {
+    height: 100vh;
     h1 {
-        margin: 80px 0 124px;
+        padding: 5vh 0 10vh;
     }
+
 }
 .bolck-isp {
     display: grid;
@@ -337,12 +360,60 @@ html,body {
         font-weight: 700;
     }
 }
+
+.palk{
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    z-index: 100000000;
+}
 .karta{
     margin: 64px 0 90px;
     height: 560px;
     overflow: hidden;
 }
 
+
+.mt-40{margin-top: -40px;}
+.right .pt40{margin-top: 0;padding-top: 40px;}
+.h100v{height: 100vh !important;}
+.wrapper.mobi{
+    display: block;
+    .left{
+       height: initial; 
+    }
+    .yellow-col{
+        flex-direction: row;
+        height: 74px;
+        width: 100%;
+    }
+    .top-line{
+        margin-top: 0;
+    }
+
+    .right{padding-top: 0px;}
+}
+
+.yellow-row{
+    display: flex;
+    padding: 15px 15px;
+    .burger{margin-top: 6px;}
+    background-color: var(--bkgmenu);
+}
+.nv-r{
+    nav{
+        left: 0;
+        z-index: 10;
+        background: var(--bkgmenu);
+        top: 0;
+        transform: translate(0, 0);
+        height: 100vh;
+        width: 100%;
+    }
+    .menu{
+        padding: 30px 15px;
+    }
+} 
 
 @import "tochki";
 @import "menu";
@@ -352,6 +423,7 @@ html,body {
 @import "form_tab";
 @import "video";
 //@import "modal";
+
 
 
 @import "media";

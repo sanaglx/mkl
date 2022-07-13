@@ -1,3 +1,7 @@
+$('.tchk1 a').click(function () {
+    return false;
+})
+
 $(".mod-owl").owlCarousel({
     //center:true,
     stagePadding: 0,
@@ -140,6 +144,18 @@ $('body').on('click','.btn-form',function () {
 
 })
 
+/****mobi? */
+function isMobile() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+       //  $('.left').hide()
+       //  $('.right').addClass('mobi')
+       //  $('.wrapper').addClass('mobi')
+          return true; 
+    }
+    return false;
+}
+
+isMobile()
 /***телефон */
 
 document.addEventListener("DOMContentLoaded", function () {

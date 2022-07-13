@@ -5,9 +5,15 @@
     height: 688px;
     top: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
+
+}
+.f101 .yellow-block {
+    height: auto;
+    height: 100%;
 }
 .f100 {
+    background: transparent;
     margin-bottom: 115px;
     .top-block {
         gap: 14%;

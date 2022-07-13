@@ -18,7 +18,7 @@
     position: absolute;
     height: 15px;
   //  width: 15px;
-  width: 70px;
+  width:90px;
     margin: 0 2px;
    // background-color: #bbbbbb;
     border: none;
@@ -43,7 +43,7 @@
   width: 94%;
   border-radius: 8px;
   box-shadow: 0 0 10px #999;
-  overflow: hidden;
+  overflow: auto;
   margin: 0 15px;
   z-index: 1005;
   .inp-col{
@@ -128,9 +128,21 @@ input[type="radio"] {
      content: "Введите данные";
      color:#f00;
      position: absolute;
-     top: 52px;
+     top: 60px;
      font-size: 14px;
  }
 .inp.invalid{
     border-color: #f00;
+}
+.modal-footer .inp.invalid::before{
+    content: "Введите данные";
+    color:#f00;
+    position: absolute;
+    top: -24px;
+    font-size: 14px;
+}
+@media(max-width:767px){
+    .modal-footer .inp.invalid::before{
+        top: 60px;
+    }
 }
