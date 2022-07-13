@@ -353,6 +353,7 @@ html.modal-active .teni, body.modal-active .teni {
   transition: 0.3s all;
   background: -100% rgba(0, 0, 0, 0);
   height: 100%;
+  width: 100%;
   opacity: 0.7;
 }
 @media (max-width: 1600px) {
@@ -1627,6 +1628,7 @@ nav {
 .stv {
   display: flex;
   margin-bottom: 10px;
+  align-items: center;
 }
 .stv__title {
   font-weight: 700;
